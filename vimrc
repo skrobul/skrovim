@@ -1,5 +1,5 @@
 syntax on
-colorscheme molokai
+colorscheme synic
 set t_Co=256
 set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
@@ -172,3 +172,8 @@ endfunction
 :nmap <C-t> :tabnew<CR>
 :imap <C-t> <Esc>:tabnew<CR>
 
+
+" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+nnoremap <M-F12> :BufExplorer<CR>
+nnoremap <F12> :bn<CR>
+nnoremap <S-F12> :bp<CR>

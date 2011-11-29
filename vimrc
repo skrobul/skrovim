@@ -88,6 +88,7 @@ filetype on
 filetype plugin on
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python setlocal omnifunc=pysmell#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -105,7 +106,7 @@ vnoremap <A-S-LeftMouse> <C-v><LeftMouse>mzgvg`z<C-g>
 
 source $VIMRUNTIME/mswin.vim
 behave mswin
-set guifont=Droid\ Sans\ Mono\ 11
+set guifont=Droid\ Sans\ Mono\ 10
 "noremap <M-LeftMouse> <4-LeftMouse>
 "inoremap <M-LeftMouse> <4-LeftMouse>
 "onoremap <M-LeftMouse> <C-C><4-LeftMouse>
@@ -139,6 +140,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Leader 
+let mapleader = ","
 
 " Tab configuration
 map <leader>tn :tabnew %<cr>
@@ -177,3 +181,30 @@ endfunction
 nnoremap <M-F12> :BufExplorer<CR>
 nnoremap <F12> :bn<CR>
 nnoremap <S-F12> :bp<CR>
+
+" NERDTree settings
+let g:NERDTreeHighlightCursorline=1
+let g:NERDTreeQuitOnOpen=1
+
+" pysmell
+let g:pysmell_matcher="case-sensitive"
+
+" ruby completion
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+"supertab
+let g:SuperTabDefaultCompletionType = "context"
+
+"wyszukiwanie w menu
+set completeopt=longest,menuone
+let g:SuperTabLongestHighlight=1
+hi Pmenu        guifg=#00ffff guibg=#dddddd            ctermbg=0 ctermfg=6
+hi PmenuSel     guifg=#ffff00 guibg=#000fff gui=bold   cterm=bold ctermfg=3
+hi PmenuSbar    guibg=#204d40                          ctermbg=6
+hi PmenuThumb   guifg=#38ff56                          ctermfg=3
+
+set guioptions=aAce
+set guifont=Monaco

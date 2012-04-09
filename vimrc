@@ -208,3 +208,7 @@ hi PmenuThumb   guifg=#38ff56                          ctermfg=3
 
 set guioptions=aAce
 set guifont=Monaco
+
+" map control-backspace to delete the previous word
+:imap <C-BS> <C-W>
+

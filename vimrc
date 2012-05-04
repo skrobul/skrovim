@@ -106,7 +106,6 @@ vnoremap <A-S-LeftMouse> <C-v><LeftMouse>mzgvg`z<C-g>
 
 source $VIMRUNTIME/mswin.vim
 behave mswin
-set guifont=Droid\ Sans\ Mono\ 10
 "noremap <M-LeftMouse> <4-LeftMouse>
 "inoremap <M-LeftMouse> <4-LeftMouse>
 "onoremap <M-LeftMouse> <C-C><4-LeftMouse>
@@ -201,13 +200,13 @@ let g:SuperTabDefaultCompletionType = "context"
 "wyszukiwanie w menu
 set completeopt=longest,menuone
 let g:SuperTabLongestHighlight=1
-hi Pmenu        guifg=#00ffff guibg=#dddddd            ctermbg=0 ctermfg=6
-hi PmenuSel     guifg=#ffff00 guibg=#000fff gui=bold   cterm=bold ctermfg=3
-hi PmenuSbar    guibg=#204d40                          ctermbg=6
-hi PmenuThumb   guifg=#38ff56                          ctermfg=3
+"hi Pmenu        guifg=#00ffff guibg=#dddddd            ctermbg=0 ctermfg=6
+"i PmenuSel     guifg=#ffff00 guibg=#000fff gui=bold   cterm=bold ctermfg=3
+"hi PmenuSbar    guibg=#204d40                          ctermbg=6
+"hi PmenuThumb   guifg=#38ff56                          ctermfg=3
 
 set guioptions=aAce
-set guifont=Monaco
+set guifont=Monaco\ 11
 
 " map control-backspace to delete the previous word
 :imap <C-BS> <C-W>

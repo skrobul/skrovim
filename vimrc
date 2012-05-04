@@ -198,7 +198,10 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 let g:SuperTabDefaultCompletionType = "context"
 
 "wyszukiwanie w menu
-set completeopt=longest,menuone
+set completeopt=longest,menuone,preview
+" dismissing pydoc once completed
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:SuperTabLongestHighlight=1
 "hi Pmenu        guifg=#00ffff guibg=#dddddd            ctermbg=0 ctermfg=6
 "i PmenuSel     guifg=#ffff00 guibg=#000fff gui=bold   cterm=bold ctermfg=3

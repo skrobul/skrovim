@@ -16,6 +16,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -140,10 +141,10 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 
 " Smart way to move btw. windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 " Leader 
 let mapleader = ","
@@ -169,7 +170,7 @@ set noswapfile
 set fileformats=unix,dos,mac
 
 " Format the statusline
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+"set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
 
 function! CurDir()

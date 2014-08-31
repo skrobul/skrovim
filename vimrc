@@ -24,6 +24,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular' "dependency for vim-markdown
 Plugin 'plasticboy/vim-markdown' "markdown syntax
 
+Plugin 'tpope/vim-rails'
+
 " instant markdown preview requires few python modules
 " pip install bottle markdown pygments
 Plugin 'isnowfy/python-vim-instant-markdown'

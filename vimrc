@@ -19,6 +19,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'matchit.zip'
 Plugin 'endwise.vim'
+Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'godlygeek/tabular' "dependency for vim-markdown
+Plugin 'plasticboy/vim-markdown' "markdown syntax
+
+" instant markdown preview requires few python modules
+" pip install bottle markdown pygments
+Plugin 'isnowfy/python-vim-instant-markdown'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -147,7 +156,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "map <C-h> <C-W>h
 "map <C-l> <C-W>l
 
-" Leader 
+" Leader
 let mapleader = ","
 
 """"""""""""""""""""""""""""""
@@ -215,9 +224,9 @@ let g:SuperTabLongestHighlight=1
 
 "
 " Plugins config
-" 
+"
 " CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Ultisnip
 "  NOTE: <f1> otherwise it overrides <tab> forever
@@ -229,6 +238,10 @@ let g:did_UltiSnips_vim_after = 1
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+
+" python-vim-instant-markdown
+python import sys; sys.path.append('/Library/Python/2.7/site-packages')
 
 
 " keymaps to help with transition back to vim

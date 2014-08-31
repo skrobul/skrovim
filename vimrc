@@ -17,7 +17,8 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'flazz/vim-colorschemes'
-
+Plugin 'matchit.zip'
+Plugin 'endwise.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,6 +51,7 @@ endif
 syntax enable
 
 colorscheme molokai
+let g:rehash256 = 1
 set t_Co=256
 set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
@@ -132,7 +134,6 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 "switching between tabs
-
 
 
 
@@ -272,4 +273,3 @@ set shell=/bin/bash
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif"
-

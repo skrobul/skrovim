@@ -265,6 +265,8 @@ nnoremap <C-k>  :tabclose<CR>
 inoremap <C-k>  <Esc>:tabclose<CR>i
 
 
+set cursorline  "highlights current line
+
 " make vundle compatible... (requires bash)"
 set shell=/bin/bash
 

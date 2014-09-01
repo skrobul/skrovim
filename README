@@ -1,15 +1,10 @@
-
-skrobul@atol:~$ git clone git@github.com:skrobul/skrovim.git
-Cloning into skrovim...
-Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
-remote: Counting objects: 74, done.
-remote: Compressing objects: 100% (67/67), done.
-remote: Total 74 (delta 2), reused 0 (delta 0)
-Receiving objects: 100% (74/74), 121.50 KiB, done.
-Resolving deltas: 100% (2/2), done.
-skrobul@atol:~$ ln -s skrovim/ .vim
-skrobul@atol:~$ ln -s skrovim/vimrc .vimrc
-
+# Installation
+```
+git clone git@github.com:skrobul/skrovim.git
+ln -s skrovim/ .vim
+ln -s skrovim/vimrc .vimrc
+git submodule add -f http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
 
 Done!
 

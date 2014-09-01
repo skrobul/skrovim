@@ -30,6 +30,7 @@ Plugin 'tpope/vim-rails' "set of rails helpers
 " pip install bottle markdown pygments
 Plugin 'isnowfy/python-vim-instant-markdown'
 Plugin 'honza/vim-snippets'
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -134,21 +135,7 @@ let g:explSplitRight=1    " Put new window to the right of the explorer
 nnoremap  <silent>  <space> :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr>
 
 
-"good tab completion - press <tab> to autocomplete if there's a character
-"previously
-function InsertTabWrapper()
-      let col = col('.') - 1
-      if !col || getline('.')[col - 1] !~ '\k'
-          return "\<tab>"
-      else
-          return "\<c-p>"
-      endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-
 "switching between tabs
-
-
 
 :nmap Z :tabprev<CR>
 :nmap X :tabnext<CR>
@@ -243,7 +230,6 @@ let g:airline_powerline_fonts = 1
 
 " python-vim-instant-markdown
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
-
 
 " keymaps to help with transition back to vim
 " Find

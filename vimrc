@@ -29,7 +29,6 @@ Plugin 'tpope/vim-rails' "set of rails helpers
 " instant markdown preview requires few python modules
 " pip install bottle markdown pygments
 Plugin 'isnowfy/python-vim-instant-markdown'
-Plugin 'flomotlik/vim-livereload'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

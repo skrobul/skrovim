@@ -232,8 +232,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " Ultisnip
 "  NOTE: <f1> otherwise it overrides <tab> forever
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-h>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:did_UltiSnips_vim_after = 1
 "
 " vim-airline
@@ -261,11 +261,6 @@ vmap <C-w> S
 vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
-" Undo, Redo (broken)
-nnoremap <C-z>  :undo<CR>
-inoremap <C-z>  <Esc>:undo<CR>
-nnoremap <C-y>  :redo<CR>
-inoremap <C-y>  <Esc>:redo<CR>
 " Tabs
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1

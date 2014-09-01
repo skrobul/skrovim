@@ -158,7 +158,7 @@ set laststatus=2
 set ruler               " Show the cursor position all the time
 set rulerformat=%30(%<%m%y%h%r%=%l,%c\ %P%)
 set showcmd
-set wildmode=longest:full
+set wildmode=longest,list,full
 set wildmenu
 
 set autoread " reads the file when it has been changed outside vim

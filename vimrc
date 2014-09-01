@@ -29,6 +29,7 @@ Plugin 'tpope/vim-rails' "set of rails helpers
 " instant markdown preview requires few python modules
 " pip install bottle markdown pygments
 Plugin 'isnowfy/python-vim-instant-markdown'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,6 +65,7 @@ syntax enable
 colorscheme ir_black
 let g:rehash256 = 1
 set t_Co=256
+
 set nocompatible        " Use Vim defaults (much better!)
 set bs=2                " Allow backspacing over everything in insert mode
 set ai                  " Always set auto-indenting on
@@ -290,3 +292,9 @@ set shell=/bin/bash
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif"
+
+" disable arrows
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

@@ -215,12 +215,9 @@ let g:NERDTreeHighlightCursorline=1
 let g:NERDTreeQuitOnOpen=1
 
 
-"supertab
-let g:SuperTabDefaultCompletionType = "context"
 
 "wyszukiwanie w menu
 set completeopt=menuone,longest,preview
-let g:SuperTabLongestHighlight=1
 
 " map control-backspace to delete the previous word
 :imap <C-BS> <C-W>
@@ -234,8 +231,8 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " Ultisnip
 "  NOTE: <f1> otherwise it overrides <tab> forever
-let g:UltiSnipsExpandTrigger="<f1>"
-let g:UltiSnipsJumpForwardTrigger="<f1>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-h>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:did_UltiSnips_vim_after = 1
 "

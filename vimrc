@@ -61,7 +61,7 @@ endif
 " syntax highlighting
 syntax enable
 
-colorscheme molokai
+colorscheme ir_black
 let g:rehash256 = 1
 set t_Co=256
 set nocompatible        " Use Vim defaults (much better!)

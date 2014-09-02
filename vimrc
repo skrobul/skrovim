@@ -107,7 +107,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set hidden " do not save history when leavy buffer
+set hidden " do not save history when leaving buffer
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -277,6 +277,18 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" buffer navigation
+" new buffer (empty)
+nmap <leader>t :enew<CR>
+" next buffer 
+nmap <leader>l :bnext<CR>
+" previous buffer
+nmap <leader>h :bprevious<CR>
+"close the buffer
+nmap <leader>w :bp <BAR> bd #<CR> 
+" show all open buffers in buffer explorer
+nmap <leader>b :ls<CR>
 
 " gui related stuff
 if has("gui_running")

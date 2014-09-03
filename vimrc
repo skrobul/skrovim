@@ -32,6 +32,7 @@ Plugin 'isnowfy/python-vim-instant-markdown'
 Plugin 'honza/vim-snippets'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +60,9 @@ if has('autocmd')
     autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
     autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
     autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+    autocmd FileType ruby,eruby set sw=2 ts=2 tw=80
+    " remove trailing whitespaces
+    autocmd FileType c,cpp,java,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 endif
 
 " syntax highlighting
@@ -291,6 +295,11 @@ nmap <silent> <leader>w :bp <BAR> bd #<CR>
 " show all open buffers in buffer explorer
 nmap <silent> <leader>b :ls<CR>
 
+" ruby - convert hashes to 1.9+ syntax
+command! NewRubyHashes :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
+" retab to n spaces
+command! -nargs=1 -range SuperRetab <line1>,<line2>s/\v%(^ *)@<= {<args>}/\t/g
+
 " gui related stuff
 if has("gui_running")
    let s:uname = system("uname")
@@ -298,3 +307,4 @@ if has("gui_running")
       set guifont=Inconsolata\ for\ Powerline:h15
    endif
 endif
+

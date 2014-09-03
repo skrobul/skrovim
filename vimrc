@@ -232,10 +232,6 @@ let g:airline#extensions#tabline#fnamemod = ':t' "display just filenames
 " python-vim-instant-markdown
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
 
-" remove GitGutter mappings to allow easy buffer navigation
-nmap <Leader>gs <Plug>GitGutterStageHunk
-nmap <Leader>gp <Plug>GitGutterPreviewHunk
-nmap <Leader>gr <Plug>GitGutterRevertHunk
 " keymaps to help with transition back to vim
 " Find
 map <C-f> /
@@ -286,9 +282,9 @@ noremap <Right> <Nop>
 " new buffer (empty)
 nmap <silent> <leader>t :enew<CR>
 " next buffer 
-nmap <silent> <leader>l :bnext<CR>
+nmap <silent> <leader>n :bnext<CR>
 " previous buffer
-nmap <silent> <leader>h :bprevious<CR>
+nmap <silent> <leader>p :bprevious<CR>
 "close the buffer
 nmap <silent> <leader>w :bp <BAR> bd #<CR> 
 " show all open buffers in buffer explorer

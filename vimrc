@@ -17,7 +17,7 @@ Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'flazz/vim-colorschemes'
-Plugin 'matchit.zip'
+Plugin 'jwhitley/vim-matchit'
 Plugin 'endwise.vim'
 Plugin 'kchmck/vim-coffee-script'
 
@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'amiorin/vim-project'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -310,3 +311,12 @@ if has("gui_running")
    endif
 endif
 
+
+" Projects init
+let g:project_use_nerdtree = 0
+set rtp+=~/.vim/bundle/vim-project
+call project#rc("~/devel")
+
+Project 'slive'
+Project '~/devel/nsdevops/ip_cleanup/', 'ipcleanup'
+" Projects config

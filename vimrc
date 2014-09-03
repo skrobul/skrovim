@@ -288,12 +288,12 @@ noremap <Right> <Nop>
 " buffer navigation
 " new buffer (empty)
 nmap <silent> <leader>t :enew<CR>
-" next buffer 
+" next buffer
 nmap <silent> <leader>n :bnext<CR>
 " previous buffer
 nmap <silent> <leader>p :bprevious<CR>
 "close the buffer
-nmap <silent> <leader>w :bp <BAR> bd #<CR> 
+nmap <silent> <leader>w :bp <BAR> bd #<CR>
 " show all open buffers in buffer explorer
 nmap <silent> <leader>b :ls<CR>
 

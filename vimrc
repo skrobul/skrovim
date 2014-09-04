@@ -132,8 +132,6 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 
-map <silent> <F4> :Sexplore<CR>
-
 " explorer
 let g:explVertical=1	" Split vertically
 let g:explSplitRight=1    " Put new window to the right of the explorer
@@ -216,6 +214,7 @@ set completeopt=menuone,longest,preview
 "
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=**/node_modules
 
 " Ultisnip
 "  NOTE: <f1> otherwise it overrides <tab> forever
@@ -237,6 +236,7 @@ let g:project_use_nerdtree = 1
 
 "NERDTree - autoclose when last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <F4> :NERDTreeToggle<CR>
 
 " keymaps to help with transition back to vim
 " Find

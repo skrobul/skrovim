@@ -36,6 +36,7 @@ Plugin 'tpope/vim-repeat'
 
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'amiorin/vim-project'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,7 +57,6 @@ if has('autocmd')
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-    "autocmd VimEnter * NERDTree
     "autocmd VimEnter * wincmd p
     " ruby completion
     autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -132,7 +132,6 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 
-map <F2> :NERDTreeToggle<CR>
 map <silent> <F4> :Sexplore<CR>
 
 " explorer
@@ -205,12 +204,6 @@ nnoremap <M-F12> :BufExplorer<CR>
 nnoremap <F12> :bn<CR>
 nnoremap <S-F12> :bp<CR>
 
-" NERDTree settings
-let g:NERDTreeHighlightCursorline=1
-let g:NERDTreeQuitOnOpen=1
-
-
-
 "wyszukiwanie w menu
 set completeopt=menuone,longest,preview
 
@@ -236,9 +229,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t' "display just filenames
 
-
 " python-vim-instant-markdown
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
+
+" Projects config
+let g:project_use_nerdtree = 1
+
+"NERDTree - autoclose when last buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " keymaps to help with transition back to vim
 " Find
@@ -275,10 +273,6 @@ set cursorline  "highlights current line
 set shell=/bin/bash
 
 
-" this machine config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif"
 
 " disable arrows
 noremap <Up> <Nop>
@@ -313,10 +307,14 @@ endif
 
 
 " Projects init
-let g:project_use_nerdtree = 0
 set rtp+=~/.vim/bundle/vim-project
 call project#rc("~/devel")
 
-Project 'slive'
-Project '~/devel/nsdevops/ip_cleanup/', 'ipcleanup'
-" Projects config
+
+"Projects shared across all computers. Define non-shared in local vimrc
+Project '~/skrovim'
+
+" this machine config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif"

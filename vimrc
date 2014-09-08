@@ -241,7 +241,7 @@ let g:airline#extensions#tabline#fnamemod = ':t' "display just filenames
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
 
 " Projects config
-let g:project_use_nerdtree = 0
+let g:project_use_nerdtree = 1
 
 "NERDTree - autoclose when last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

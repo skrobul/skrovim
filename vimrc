@@ -78,6 +78,7 @@ endif
 syntax enable
 
 colorscheme pencil
+set bg=dark
 let g:rehash256 = 1
 set t_Co=256
 
@@ -245,6 +246,11 @@ let g:project_use_nerdtree = 1
 "NERDTree - autoclose when last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F4> :NERDTreeToggle<CR>
+
+" pencil theme
+let g:pencil_higher_contrast = 1
+let g:pencil_neutral_headings = 1
+let g:pencil_terminal_italics = 1
 
 " keymaps to help with transition back to vim
 " Find

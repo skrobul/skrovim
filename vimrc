@@ -37,6 +37,9 @@ Plugin 'tpope/vim-repeat'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'amiorin/vim-project'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rstacruz/sparkup'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -216,12 +219,16 @@ set completeopt=menuone,longest,preview
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=**/node_modules
 
-" Ultisnip
-"  NOTE: <f1> otherwise it overrides <tab> forever
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:did_UltiSnips_vim_after = 1
+" Ultisnip - disabled shortcuts so they don't conflict with YouCompleteMe
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1

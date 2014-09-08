@@ -42,6 +42,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup'
 Plugin 'mattly/iterm-colors-pencil'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'thoughtbot/vim-rspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

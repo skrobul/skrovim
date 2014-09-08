@@ -40,6 +40,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup'
+Plugin 'mattly/iterm-colors-pencil'
+Plugin 'reedes/vim-colors-pencil'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,7 +76,7 @@ endif
 " syntax highlighting
 syntax enable
 
-colorscheme ir_black
+colorscheme pencil
 let g:rehash256 = 1
 set t_Co=256
 
@@ -262,7 +264,7 @@ vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
 " Tabs
-let g:airline_theme='badwolf'
+let g:airline_theme='pencil'
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <C-b>  :tabprevious<CR>
 inoremap <C-b>  <Esc>:tabprevious<CR>i

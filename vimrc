@@ -35,7 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'amiorin/vim-project'
+Plugin 'skrobul/vim-project'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
@@ -241,7 +241,7 @@ let g:airline#extensions#tabline#fnamemod = ':t' "display just filenames
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
 
 " Projects config
-let g:project_use_nerdtree = 1
+let g:project_use_nerdtree = 0
 
 "NERDTree - autoclose when last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif

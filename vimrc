@@ -157,8 +157,6 @@ nnoremap  <silent>  <space> :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr
 "map <C-h> <C-W>h
 "map <C-l> <C-W>l
 
-" Leader
-let mapleader = ","
 
 """"""""""""""""""""""""""""""
 " => Statusline

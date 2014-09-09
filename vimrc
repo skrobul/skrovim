@@ -255,6 +255,9 @@ let g:pencil_higher_contrast = 1
 let g:pencil_neutral_headings = 1
 let g:pencil_terminal_italics = 1
 
+" dispatch.vim + rspec
+let g:rspec_command = 'Dispatch rspec {spec}'
+
 " keymaps to help with transition back to vim
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.
 vnoremap <Tab> >

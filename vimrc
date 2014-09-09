@@ -280,14 +280,15 @@ vmap <C-c> y
 " Tabs
 let g:airline_theme='pencil'
 let g:airline#extensions#tabline#enabled = 1
-nnoremap <C-b>  :tabprevious<CR>
-inoremap <C-b>  <Esc>:tabprevious<CR>i
-nnoremap <C-n>  :tabnext<CR>
-inoremap <C-n>  <Esc>:tabnext<CR>i
-nnoremap <C-t>  :tabnew<CR>
-inoremap <C-t>  <Esc>:tabnew<CR>i
-nnoremap <C-k>  :tabclose<CR>
-inoremap <C-k>  <Esc>:tabclose<CR>i
+" temporarily disable until I figure out better shortcuts
+" nnoremap <C-b>  :tabprevious<CR>
+" inoremap <C-b>  <Esc>:tabprevious<CR>i
+" nnoremap <C-n>  :tabnext<CR>
+" inoremap <C-n>  <Esc>:tabnext<CR>i
+" nnoremap <C-t>  :tabnew<CR>
+" inoremap <C-t>  <Esc>:tabnew<CR>i
+" nnoremap <C-k>  :tabclose<CR>
+" inoremap <C-k>  <Esc>:tabclose<CR>i
 
 
 set cursorline  "highlights current line

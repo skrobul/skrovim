@@ -221,7 +221,7 @@ set completeopt=menuone,longest,preview
 " Plugins config
 "
 " CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=**/node_modules
 
 " Ultisnip - disabled shortcuts so they don't conflict with YouCompleteMe

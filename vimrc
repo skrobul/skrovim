@@ -256,7 +256,7 @@ let g:pencil_neutral_headings = 1
 let g:pencil_terminal_italics = 1
 
 " dispatch.vim + rspec
-let g:rspec_command = 'Dispatch rspec {spec}
+let g:rspec_command = 'Dispatch rspec {spec}'
 " key mappings for rspec
 map <Leader>c :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>

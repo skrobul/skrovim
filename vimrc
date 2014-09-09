@@ -256,8 +256,6 @@ let g:pencil_neutral_headings = 1
 let g:pencil_terminal_italics = 1
 
 " keymaps to help with transition back to vim
-" Find
-map <C-f> /
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.
 vnoremap <Tab> >
 vnoremap <S-Tab> <

@@ -223,6 +223,7 @@ set completeopt=menuone,longest,preview
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=**/node_modules
+let g:ctrlp_open_new_file = "r"
 
 " Ultisnip - disabled shortcuts so they don't conflict with YouCompleteMe
 " make YCM compatible with UltiSnips (using supertab)
@@ -256,12 +257,14 @@ let g:pencil_neutral_headings = 1
 let g:pencil_terminal_italics = 1
 
 " dispatch.vim + rspec
-let g:rspec_command = 'Dispatch rspec {spec}'
+let g:rspec_command = ':Dispatch rspec {spec}'
 " key mappings for rspec
 map <Leader>c :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_runner = "os_x_iterm"
 
 " keymaps to help with transition back to vim
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.

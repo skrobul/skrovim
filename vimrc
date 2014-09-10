@@ -10,7 +10,14 @@ call vundle#begin()"
 
 Plugin 'gmarik/Vundle.vim'  "vundle itself
 Plugin 'tpope/vim-fugitive' "git wrapper
-Plugin 'kien/ctrlp.vim'     "full path fuzzy finder
+
+"full path fuzzy finder
+Plugin 'kien/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
+" remember to compile cmatcher binary
+" https://github.com/JazzCore/ctrlp-cmatcher#installation
+
+
 Plugin 'SirVer/ultisnips'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
@@ -224,6 +231,7 @@ set completeopt=menuone,longest,preview
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 set wildignore+=**/node_modules
 let g:ctrlp_open_new_file = "r"
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' } "fuzzy matching with ctrlp+cmatcher"
 
 " Ultisnip - disabled shortcuts so they don't conflict with YouCompleteMe
 " make YCM compatible with UltiSnips (using supertab)

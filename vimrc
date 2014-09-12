@@ -47,8 +47,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup'
-Plugin 'mattly/iterm-colors-pencil'
-Plugin 'reedes/vim-colors-pencil'
+" Plugin 'mattly/iterm-colors-pencil'
+" Plugin 'reedes/vim-colors-pencil'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-dispatch'
 Plugin 'kana/vim-textobj-user'
@@ -77,9 +77,9 @@ if has('autocmd')
     "autocmd VimEnter * wincmd p
     " ruby completion
     autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+    " autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+    " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
     autocmd FileType ruby,eruby set sw=2 ts=2 tw=80
     " remove trailing whitespaces
     autocmd FileType c,cpp,java,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -88,7 +88,7 @@ endif
 " syntax highlighting
 syntax enable
 
-colorscheme pencil
+colorscheme solarized
 set bg=dark
 let g:rehash256 = 1
 set t_Co=256
@@ -290,7 +290,7 @@ vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
 " Tabs
-let g:airline_theme='pencil'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 " temporarily disable until I figure out better shortcuts
 " nnoremap <C-b>  :tabprevious<CR>

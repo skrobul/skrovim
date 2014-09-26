@@ -69,6 +69,7 @@ if has('autocmd')
     autocmd BufRead,BufNewFile *.tex set tw=80
     "wrap lines in .txt files
     autocmd BufNewFile,BufRead *.txt set tw=78
+    autocmd BufNewFile,BufRead *.md set tw=78
 
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -82,7 +83,7 @@ if has('autocmd')
     " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
     autocmd FileType ruby,eruby set sw=2 ts=2 tw=80
     " remove trailing whitespaces
-    autocmd FileType c,cpp,java,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+    autocmd FileType cucumber,c,cpp,java,php,ruby,md autocmd BufWritePre <buffer> :%s/\s\+$//e
 endif
 
 " syntax highlighting
@@ -354,3 +355,5 @@ Project '~/skrovim'
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif"
+
+set clipboard=unnamed

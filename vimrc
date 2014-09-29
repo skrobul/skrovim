@@ -276,6 +276,15 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 "let g:rspec_runner = "os_x_iterm"
 
+" EasyMotion
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+" Disabled temporarily due to conflict with clearing nohl 
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>h <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion"
+
 " keymaps to help with transition back to vim
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.
 vnoremap <Tab> >

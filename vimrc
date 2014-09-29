@@ -120,9 +120,7 @@ set ttimeoutlen=50
 set incsearch
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
- nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
+nnoremap <silent> <Leader>l :nohlsearch<CR><C-L>
 
 
 " Added to default to high security within Gentoo. Fixes bug #14088
@@ -273,7 +271,7 @@ let g:rspec_command = ':Dispatch rspec {spec}'
 " key mappings for rspec
 map <Leader>c :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <Leader>z :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 "let g:rspec_runner = "os_x_iterm"

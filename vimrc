@@ -120,7 +120,7 @@ set ttimeoutlen=50
 set incsearch
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
-nnoremap <silent> <Leader>l :nohlsearch<CR><C-L>
+nnoremap <silent> <Leader>q :nohlsearch<CR><C-L>
 
 
 " Added to default to high security within Gentoo. Fixes bug #14088
@@ -279,9 +279,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 " EasyMotion
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-" Disabled temporarily due to conflict with clearing nohl 
-" map <Leader>l <Plug>(easymotion-lineforward)
-" map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion"
 

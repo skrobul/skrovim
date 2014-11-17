@@ -35,11 +35,11 @@ Plugin 'tpope/vim-rails' "set of rails helpers
 
 " instant markdown preview requires few python modules
 " pip install bottle markdown pygments
+Plugin 'tpope/vim-repeat'
 Plugin 'isnowfy/python-vim-instant-markdown'
 Plugin 'honza/vim-snippets'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
 
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'skrobul/vim-project'
@@ -56,6 +56,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-bundler'
+Plugin 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,6 +73,8 @@ if has('autocmd')
     "wrap lines in .txt files
     autocmd BufNewFile,BufRead *.txt set tw=78
     autocmd BufNewFile,BufRead *.md set tw=78
+    " salt states are just yaml files
+    autocmd BufNewFile,BufRead *.sls set ft=yaml sw=2 ts=2 
 
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -254,6 +257,9 @@ let g:airline#extensions#tabline#fnamemod = ':t' "display just filenames
 " python-vim-instant-markdown
 python import sys; sys.path.append('/Library/Python/2.7/site-packages')
 
+" vim-markdown - no folding
+let g:vim_markdown_folding_disabled=1
+
 " Projects config
 let g:project_use_nerdtree = 1
 
@@ -283,6 +289,9 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion"
+
+" mapping for dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 " keymaps to help with transition back to vim
 " indend / deindent after selecting the text with (⇧ v), (.) to repeat.

@@ -133,6 +133,7 @@ set complete-=k
 
 
 set number
+set relativenumber
 set hlsearch
 set ignorecase
 set smartcase

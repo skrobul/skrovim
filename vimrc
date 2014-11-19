@@ -57,6 +57,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-bundler'
 Plugin 'rizzatti/dash.vim'
+Plugin 'slim-template/vim-slim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -58,6 +58,8 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-bundler'
 Plugin 'rizzatti/dash.vim'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'MaxSt/FlatColor'
+Plugin 'cseelus/vim-colors-clearance'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,7 +97,7 @@ endif
 " syntax highlighting
 syntax enable
 
-colorscheme solarized
+colorscheme railscasts
 set bg=dark
 let g:rehash256 = 1
 set t_Co=256
@@ -310,7 +312,7 @@ vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
 " Tabs
-let g:airline_theme='solarized'
+" let g:airline_theme='flatcolor'
 let g:airline#extensions#tabline#enabled = 1
 " temporarily disable until I figure out better shortcuts
 " nnoremap <C-b>  :tabprevious<CR>

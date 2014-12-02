@@ -92,6 +92,10 @@ if has('autocmd')
     autocmd FileType ruby,eruby set sw=2 ts=2 tw=80
     " remove trailing whitespaces
     autocmd FileType cucumber,c,cpp,java,php,ruby,md autocmd BufWritePre <buffer> :%s/\s\+$//e
+    " automatically open quickfix window for cofee script
+    autocmd QuickFixCmdPost * nested cwindow | redraw!
+    " recompile file on write
+    autocmd BufWritePost *.coffee silent make!
 endif
 
 " syntax highlighting

@@ -382,3 +382,7 @@ if filereadable(expand("~/.vimrc.local"))
 endif"
 
 set clipboard=unnamed
+
+" Make 81st column stand out
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)

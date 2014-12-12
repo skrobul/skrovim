@@ -1,5 +1,4 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible              " be iMproved, required filetype off                  " required
 
 
 " VUNDLE  - plugins
@@ -77,7 +76,7 @@ if has('autocmd')
     autocmd BufNewFile,BufRead *.txt set tw=78
     autocmd BufNewFile,BufRead *.md set tw=78
     " salt states are just yaml files
-    autocmd BufNewFile,BufRead *.sls set ft=yaml sw=2 ts=2 
+    autocmd BufNewFile,BufRead *.sls set ft=yaml sw=2 ts=2
 
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS

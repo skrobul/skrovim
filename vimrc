@@ -95,7 +95,7 @@ if has('autocmd')
     " automatically open quickfix window for cofee script
     autocmd QuickFixCmdPost * nested cwindow | redraw!
     " recompile file on write
-    autocmd BufWritePost *.coffee silent make!
+    " autocmd BufWritePost *.coffee silent make!
 endif
 
 " syntax highlighting
@@ -252,6 +252,14 @@ let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
+
+" YCM: pre-populate completion with language syntax
+let g:ycm_seed_identifiers_with_syntax = 1
+
+" YCM: seed identifier databse with your files
+" disable this if your tags are on network drive
+let g:ycm_collect_identifiers_from_tags_files = 0
+
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
@@ -376,13 +384,33 @@ call project#rc("~/devel")
 "Projects shared across all computers. Define non-shared in local vimrc
 Project '~/skrovim'
 
-" this machine config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif"
-
 set clipboard=unnamed
 
 " Make 81st column stand out
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
+
+
+" This rewires n and N to do the highlighing...
+nnoremap <silent> n   n:call HLNext(0.4)<cr>
+nnoremap <silent> N   N:call HLNext(0.4)<cr>
+function! HLNext (blinktime)
+    let [bufnum, lnum, col, off] = getpos('.')
+    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+    let target_pat = '\c\%#\%('.@/.'\)'
+    let ring = matchadd('WhiteOnRed', target_pat, 101)
+    redraw
+    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+    call matchdelete(ring)
+    redraw
+endfunction
+
+"====[ Make tabs, trailing whitespace, and non-breaking spaces visible ]======
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
+
+" this machine config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif"
+

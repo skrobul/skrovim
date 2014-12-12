@@ -95,7 +95,7 @@ if has('autocmd')
     " automatically open quickfix window for cofee script
     autocmd QuickFixCmdPost * nested cwindow | redraw!
     " recompile file on write
-    autocmd BufWritePost *.coffee silent make!
+    " autocmd BufWritePost *.coffee silent make!
 endif
 
 " syntax highlighting
@@ -251,6 +251,14 @@ let g:ctrlp_match_func = {'match' : 'matcher#cmatch' } "fuzzy matching with ctrl
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+
+
+" YCM: pre-populate completion with language syntax
+let g:ycm_seed_identifiers_with_syntax = 1
+
+" YCM: seed identifier databse with your files
+" disable this if your tags are on network drive
+let g:ycm_collect_identifiers_from_tags_files = 0
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"

@@ -16,7 +16,6 @@ Plugin 'JazzCore/ctrlp-cmatcher'
 " remember to compile cmatcher binary
 " https://github.com/JazzCore/ctrlp-cmatcher#installation
 
-
 Plugin 'SirVer/ultisnips'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'bling/vim-airline'
@@ -42,7 +41,7 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'skrobul/vim-project'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup'

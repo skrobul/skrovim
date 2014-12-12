@@ -394,6 +394,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 " This rewires n and N to do the highlighing...
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
+highlight WhiteOnRed ctermbg=red ctermfg=white
 function! HLNext (blinktime)
     let [bufnum, lnum, col, off] = getpos('.')
     let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))

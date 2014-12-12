@@ -1,5 +1,4 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible              " be iMproved, required filetype off                  " required
 
 
 " VUNDLE  - plugins
@@ -16,7 +15,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'JazzCore/ctrlp-cmatcher'
 " remember to compile cmatcher binary
 " https://github.com/JazzCore/ctrlp-cmatcher#installation
-
 
 Plugin 'SirVer/ultisnips'
 Plugin 'tomtom/tcomment_vim'
@@ -43,7 +41,7 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'skrobul/vim-project'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rstacruz/sparkup'
@@ -77,7 +75,7 @@ if has('autocmd')
     autocmd BufNewFile,BufRead *.txt set tw=78
     autocmd BufNewFile,BufRead *.md set tw=78
     " salt states are just yaml files
-    autocmd BufNewFile,BufRead *.sls set ft=yaml sw=2 ts=2 
+    autocmd BufNewFile,BufRead *.sls set ft=yaml sw=2 ts=2
 
     autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -394,6 +392,7 @@ call matchadd('ColorColumn', '\%81v', 100)
 " This rewires n and N to do the highlighing...
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
+highlight WhiteOnRed ctermbg=red ctermfg=white
 function! HLNext (blinktime)
     let [bufnum, lnum, col, off] = getpos('.')
     let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))

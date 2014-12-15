@@ -88,6 +88,7 @@ if has('autocmd')
     " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
     " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
     autocmd FileType ruby,eruby set sw=2 ts=2 tw=80
+    autocmd FileType coffee set sw=2 ts=2 tw=80
     " remove trailing whitespaces
     autocmd FileType cucumber,c,cpp,java,php,ruby,md autocmd BufWritePre <buffer> :%s/\s\+$//e
     " automatically open quickfix window for cofee script

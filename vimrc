@@ -100,7 +100,7 @@ endif
 " syntax highlighting
 syntax enable
 
-colorscheme railscasts
+colorscheme grb256
 set bg=dark
 let g:rehash256 = 1
 set t_Co=256
